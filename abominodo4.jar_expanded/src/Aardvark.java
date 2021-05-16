@@ -1,22 +1,27 @@
 import java.awt.Dimension;
 import java.io.*;
 import java.net.InetAddress;
- import java.text.DateFormat; 
+import java.text.DateFormat;
 import java.util.*;
 import javax.swing.JEditorPane;
- import javax.swing.JFrame; 
+import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 
-public class Aardvark{
-private String playerName; public List<Domino> _d; public List<Domino> _g;
-public int[][] grid = new int[7][8]; public int[][] gg = new int[7][8]; int mode = -1;
-int cf;
-int score;
-long startTime;
+public class Aardvark {
+	private String playerName;
+	public List<Domino> _d;
+	public List<Domino> _g;
+	public int[][] grid = new int[7][8];
+	public int[][] gg = new int[7][8];
+	int mode = -1;
+	int cf;
+	int score;
+	long startTime;
 
-PictureFrame pf = new PictureFrame(); AardvarkSecond as = new AardvarkSecond();
-public final int ZERO = 0;
-private BufferedReader r;
+	PictureFrame pf = new PictureFrame();
+	AardvarkSecond as = new AardvarkSecond();
+	public final int ZERO = 0;
+	private BufferedReader r;
 
 public void run() {
 System.out.println("Welcome To Abominodo - The Best Dominoes Puzzle Game in the Universe"); System.out.println("Version 1.0 (c), Kevan Buckley, 2010");
@@ -393,19 +398,16 @@ new ConnectionGenius(ipa);
 
 }
 
+	public static void main(String[] args) {
+		new Aardvark().run();
+	}
 
+	public String getPlayerName() {
+		return playerName;
+	}
 
-public static void main(String[] args) {
-new Aardvark().run();
-}
-
-public String getPlayerName() {
-return playerName;
-}
-
-public void setPlayerName(String playerName) {
-this.playerName = playerName;
-}
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
 
 }
-
